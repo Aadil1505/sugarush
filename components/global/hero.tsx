@@ -99,7 +99,7 @@ export default function HeroCarousel() {
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-background">
+    <div className="relative h-dvh w-full overflow-hidden bg-background">
       <Carousel
         setApi={setApi}
         plugins={[autoplayRef.current]}
@@ -136,7 +136,7 @@ export default function HeroCarousel() {
       {/* Order Now Button - Bottom Left */}
       <Button
         onClick={handleOrderNow}
-        className="absolute bottom-12 left-8 z-20 font-semibold shadow-2xl transition-transform hover:scale-105"
+        className="absolute bottom-12 left-8  font-semibold shadow-2xl transition-transform hover:scale-105"
       >
         {/* <ShoppingCart className="h-5 w-5" /> */}
         ORDER NOW
@@ -148,7 +148,7 @@ export default function HeroCarousel() {
           onClick={toggleVideoPlayback}
           size="icon"
           variant="ghost"
-          className="absolute bottom-12 right-8 z-20 rounded-full bg-background/20 text-primary-foreground backdrop-blur-md transition-transform hover:bg-background/40 hover:scale-110"
+          className="absolute bottom-12 right-8  rounded-full bg-background/20 text-primary-foreground backdrop-blur-md transition-transform hover:bg-background/40 hover:scale-110"
           aria-label={videoPlaying ? 'Pause video' : 'Play video'}
         >
           {videoPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
@@ -156,7 +156,7 @@ export default function HeroCarousel() {
       )}
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+      <div className="absolute bottom-8 left-1/2  flex -translate-x-1/2 gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
