@@ -39,8 +39,8 @@ export const Location = () => {
                     <div>
                       <h3 className="font-semibold text-lg text-foreground mb-1">Address</h3>
                       <p className="text-muted-foreground">
-                        280 Merrick Rd<br />
-                        Rockville Centre, NY 11570
+                        753 Merrick Rd<br />
+                        Baldwin, NY 11510
                       </p>
                       <Button
                         variant="link"
@@ -48,7 +48,7 @@ export const Location = () => {
                         asChild
                       >
                         <a
-                          href="https://www.google.com/maps/search/?api=1&query=280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570"
+                          href="https://maps.app.goo.gl/vsqk9uqi3Lv4mV1S9?g_st=ipc"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -65,10 +65,10 @@ export const Location = () => {
                     <div>
                       <h3 className="font-semibold text-lg text-foreground mb-1">Phone</h3>
                       <a
-                        href="tel:5165039906"
+                        href="tel:6316443982"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        (516) 220-0695
+                        (631) 644-3982
                       </a>
                     </div>
                   </div>
@@ -102,29 +102,16 @@ export const Location = () => {
 
             <div className="rounded-lg overflow-hidden border-2 border-border shadow-lg h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5423456789!2d-73.6473!3d40.6560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26da1f8e1f1f1%3A0x1234567890abcdef!2s280%20Merrick%20Rd%2C%20Rockville%20Centre%2C%20NY%2011570!5e0!3m2!1sen!2sus!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.0155672789115!2d-73.61661802390098!3d40.65158724131184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27bc98434362d%3A0xefc5703619aad6a!2ssugarush!5e0!3m2!1sen!2sus!4v1763845896341!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Abu Zayn Location Map"
+                title="Sugarush Location Map"
               />
             </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-primary transition-all duration-300 font-semibold"
-              asChild
-            >
-              <Link href="https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd">
-
-                ORDER PICKUP NOW
-              </Link>
-            </Button>
           </div>
         </div>
       </div>

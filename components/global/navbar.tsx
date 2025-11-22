@@ -1,8 +1,14 @@
 'use client'
 import Link from 'next/link'
-// import { Logo } from '@/components/logo'
-import { AArrowUp, Menu, X } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { useScroll } from 'motion/react'
@@ -14,14 +20,14 @@ const menuItems = [
 ]
 
 export const Navbar = () => {
-    const [menuState, setMenuState] = React.useState(false)
+    const [open, setOpen] = React.useState(false)
     const [scrolled, setScrolled] = React.useState(false)
 
     const { scrollYProgress } = useScroll()
 
     React.useEffect(() => {
         const unsubscribe = scrollYProgress.on('change', (latest) => {
-            setScrolled(latest > 0.05)
+            setScrolled(latest > 0.0001)
         })
         return () => unsubscribe()
     }, [scrollYProgress])
@@ -29,65 +35,103 @@ export const Navbar = () => {
     return (
         <header>
             <nav
-                data-state={menuState && 'active'}
-                className={cn('fixed z-20 w-full border-b transition-colors duration-150', scrolled && 'bg-background/50 backdrop-blur-3xl')}>
-                <div className="mx-auto max-w-5xl px-6 transition-all duration-300">
-                    <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-                        <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
-                            <Link
-                                href="/"
-                                aria-label="home"
-                                className="flex items-center space-x-2">
-                                <img src={"sugarush-transparent.png"} className='h-10'/>
-                            </Link>
+                className={cn(
+                    'fixed z-20 w-full transition-colors duration-150',
+                    scrolled && 'bg-background/80 backdrop-blur-xl border-b'
+                )}
+            >
+                <div className="mx-auto max-w-7xl px-6 transition-all duration-300">
+                    <div className="relative flex items-center justify-between py-4">
+                        {/* Logo */}
+                        <Link
+                            href="/"
+                            aria-label="home"
+                            className="flex items-center space-x-2"
+                        >
+                            <img src="/sugarush-transparent.png" className="h-10" alt="SugaRush" />
+                        </Link>
 
-                            <button
-                                onClick={() => setMenuState(!menuState)}
-                                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-                            </button>
-
-                            <div className="hidden lg:block">
-                                <ul className="flex gap-8 text-sm">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        {/* Desktop Navigation */}
+                        <div className="hidden lg:flex items-center gap-8">
+                            <ul className="flex gap-8 text-sm font-medium">
+                                {menuItems.map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={item.href}
+                                            className="text-muted-foreground hover:text-foreground transition-colors duration-150"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                            <Button
+                                asChild
+                                className="bg-primary hover:bg-primary/90"
+                            >
+                                <Link href="https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd">
+                                    ORDER NOW
+                                </Link>
+                            </Button>
                         </div>
 
-                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-                            <div className="lg:hidden">
-                                <ul className="space-y-6 text-base">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
-                                    asChild
-                                    size="sm">
-                                    <Link href="https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd">
-                                        <span>ORDER NOW</span>
-                                    </Link>
+                        {/* Mobile Menu */}
+                        <Sheet open={open} onOpenChange={setOpen}>
+                            <SheetTrigger asChild className="lg:hidden">
+                                <Button variant="ghost" size="icon">
+                                    <Menu className="h-6 w-6" />
+                                    <span className="sr-only">Toggle menu</span>
                                 </Button>
-                            </div>
-                        </div>
+                            </SheetTrigger>
+                            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+                                <SheetHeader className="text-center border-b pb-4">
+                                    <SheetTitle className="flex justify-center">
+                                        <Link
+                                            href="/"
+                                            onClick={() => setOpen(false)}
+                                            className="flex items-center"
+                                        >
+                                            <img src="/sugarush-transparent.png" className="h-12" alt="SugaRush" />
+                                        </Link>
+                                    </SheetTitle>
+                                </SheetHeader>
+                                
+                                <div className="flex flex-col items-center justify-center h-[calc(100%-80px)] gap-4">
+                                    <nav className="w-full">
+                                        <ul className="flex flex-col items-center gap-2">
+                                            {menuItems.map((item, index) => (
+                                                <li key={index} className="w-full">
+                                                    <Link
+                                                        href={item.href}
+                                                        onClick={() => setOpen(false)}
+                                                        className="text-xl font-semibold text-foreground hover:text-primary transition-colors duration-150 block py-3 text-center rounded-lg hover:bg-muted"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </nav>
+                                    
+                                    <div>
+
+                                    </div>
+                                    <Button
+                                        asChild
+                                        size="lg"
+                                        className="bg-primary hover:bg-primary/90 w-full max-w-[250px] text-base font-bold"
+                                    >
+                                        <Link 
+                                            href="https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd"
+                                            onClick={() => setOpen(false)}
+                                        >
+                                            ORDER NOW
+                                        </Link>
+                                    </Button>
+                                    <p className='text-xs text-muted-foreground'>Open Daily 9 AM - 2 AM</p>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
                     </div>
                 </div>
             </nav>
