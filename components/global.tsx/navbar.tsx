@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils'
 import { useScroll } from 'motion/react'
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Menu', href: '#menu' },
+    { name: 'Contact', href: '#contact' },
 ]
 
 export const Navbar = () => {
@@ -39,7 +39,7 @@ export const Navbar = () => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <AArrowUp />
+                                <img src={"sugarush-transparent.png"} className='h-10'/>
                             </Link>
 
                             <button

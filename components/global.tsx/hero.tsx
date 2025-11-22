@@ -15,20 +15,17 @@ const slides = [
   {
     type: 'video',
     src: 'vid.mp4',
-    title: 'Welcome to Our Platform',
-    description: 'Experience the future of digital innovation',
+    title: 'Video',
   },
   {
     type: 'image',
     src: 'waffle.jpg',
-    title: 'Global Reach',
-    description: 'Connecting people across the world',
+    title: 'Waffle',
   },
   {
     type: 'image',
     src: 'shake1.jpg',
-    title: 'Innovation First',
-    description: 'Building tomorrow\'s solutions today',
+    title: 'Milkshake',
   },
 ]
 
