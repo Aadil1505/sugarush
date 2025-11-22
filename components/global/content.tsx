@@ -32,7 +32,7 @@ export default function ContentSection() {
                         </div>
 
                         {/* Testimonial */}
-                        <div className="bg-muted/50 rounded-2xl border border-border p-6 backdrop-blur-sm">
+                        <a href='https://share.google/A75ELFx7Yno6jdTGo' className="bg-muted/50 rounded-2xl border border-border p-6 backdrop-blur-sm" target="_blank" rel="noopener noreferrer">
                             <blockquote className="space-y-4">
                                 <p className="text-foreground text-base italic leading-relaxed">
                                     "Creamy, flavorful, and made just right. With crepes, waffles, ice cream, and so many toppings to choose from, there's something for every sweet tooth."
@@ -59,7 +59,7 @@ export default function ContentSection() {
                                     </div>
                                 </div>
                             </blockquote>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
