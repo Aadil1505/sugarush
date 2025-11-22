@@ -11,24 +11,24 @@ const carouselImages = [
 
 export default function ContentSection2() {
     return (
-        <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-7xl px-6">
-                <div className="bg-[#f02475] rounded-3xl overflow-hidden">
-                    <div className="grid md:grid-cols-2 gap-8 items-center p-8 md:p-16">
+        <section className="py-8 md:py-16 lg:py-32">
+            <div className="mx-auto max-w-7xl px-4 md:px-6">
+                <div className="bg-[#f02475] rounded-2xl md:rounded-3xl overflow-hidden border border-black">
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8 lg:p-16">
                         {/* Text Content */}
-                        <div className="space-y-6 text-primary-foreground z-10 text-center md:text-left">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                        <div className="space-y-3 md:space-y-6 text-primary-foreground z-10 text-center md:text-left">
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">
                                 TRY OUR NEW SHAKES
                             </h2>
-                            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed">
+                            <p className="text-sm md:text-lg lg:text-xl text-primary-foreground leading-relaxed">
                                 Indulge in our creamy, handcrafted shakes made with premium ice cream and fresh ingredients.
                                 Each shake is a perfect blend of flavor and texture, topped with whipped cream and your favorite toppings.
                             </p>
-                            <div className="flex items-center justify-center md:justify-start gap-4 pt-2">
-                                <Button variant={"secondary"}>
+                            <div className="flex items-center justify-center gap-3 pt-2">
+                                <Button variant={"secondary"} className=" ">
                                     ORDER NOW
                                 </Button>
-                                <Button variant={"default"}>
+                                <Button variant={"default"} className=" ">
                                     VIEW MENU
                                 </Button>
                             </div>
@@ -39,17 +39,17 @@ export default function ContentSection2() {
                             <img
                                 src="/shake-transparent.png"
                                 alt="Delicious shake"
-                                className="w-60 rotate-6 drop-shadow-2xl opacity-20"
+                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl opacity-20"
                             />
                             <img
                                 src="/shake-transparent.png"
                                 alt="Delicious shake"
-                                className="w-60 rotate-6 drop-shadow-2xl hover:rotate-12 transition-transform duration-300"
+                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl hover:rotate-12 transition-transform duration-300 mb-6"
                             />
                             <img
                                 src="/shake-transparent.png"
                                 alt="Delicious shake"
-                                className="w-60 rotate-6 drop-shadow-2xl opacity-20"
+                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl opacity-20"
                             />
                         </div>
                     </div>

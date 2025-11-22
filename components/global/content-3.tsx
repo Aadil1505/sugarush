@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
     Carousel,
     CarouselContent,
@@ -6,7 +5,6 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-import { HyperText } from "../ui/hyper-text"
 import { SparklesText } from "../ui/sparkles-text"
 
 const carouselImages = [
@@ -18,12 +16,12 @@ const carouselImages = [
     { src: "/crepe-6.jpg", alt: "Caramel Banana Crepe" },
 ]
 
-export default function ContentSection2() {
+export default function ContentSection3() {
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center space-y-4 mb-12">
-                    <SparklesText className="text-center text-4xl font- tracking-tighter md:text-5xl lg:text-7xl">Soooo Sweet</SparklesText>
+                    <SparklesText colors={{ first: "#f02475", second: "#e0c53c" }} className="text-center text-4xl font- tracking-tighter md:text-5xl lg:text-7xl">Soooo Sweet</SparklesText>
                     <h2 className="text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
                         You&apos;ll Seek Seconds
                     </h2>
