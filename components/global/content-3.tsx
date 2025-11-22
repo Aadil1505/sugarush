@@ -21,11 +21,11 @@ export default function ContentSection3() {
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center space-y-4 mb-12">
-                    <SparklesText colors={{ first: "#f02475", second: "#e0c53c" }} className="text-center text-4xl font- tracking-tighter md:text-5xl lg:text-7xl">Soooo Sweet</SparklesText>
+                    <SparklesText colors={{ first: "#f02475", second: "#e0c53c" }} className="text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">Soooo Sweet</SparklesText>
                     <h2 className="text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
                         You&apos;ll Seek Seconds
                     </h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
                         Explore our handcrafted crepes made fresh daily with the finest ingredients
                     </p>
                 </div>

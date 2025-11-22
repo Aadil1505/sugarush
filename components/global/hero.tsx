@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/carousel'
 import { Button } from '@/components/ui/button'
 import Autoplay from 'embla-carousel-autoplay'
+import Link from 'next/link'
 
 const slides = [
   {
@@ -135,11 +136,11 @@ export default function HeroCarousel() {
 
       {/* Order Now Button - Bottom Left */}
       <Button
-        onClick={handleOrderNow}
         className="absolute bottom-12 left-8  font-semibold shadow-2xl transition-transform hover:scale-105"
       >
-        {/* <ShoppingCart className="h-5 w-5" /> */}
-        ORDER NOW
+        <Link href={"https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd"}>
+          ORDER NOW
+        </Link>
       </Button>
 
       {/* Video Play/Pause Button */}
@@ -161,11 +162,10 @@ export default function HeroCarousel() {
           <button
             key={index}
             onClick={() => api?.scrollTo(index)}
-            className={`h-3 rounded-full transition-all ${
-              index === current - 1
+            className={`h-3 rounded-full transition-all ${index === current - 1
                 ? 'w-12 bg-primary'
                 : 'w-3 bg-muted-foreground/50 hover:bg-muted-foreground'
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

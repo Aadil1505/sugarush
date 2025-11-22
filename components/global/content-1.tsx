@@ -5,10 +5,10 @@ export default function ContentSection1() {
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
                 <h1 className="text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
-                    THE <AuroraText colors={["#e0c53c", "#a1954e", "#d3944b", "#8b6654"]}>FLAVORS OF DUBAI</AuroraText>ARE HERE
+                    THE <AuroraText colors={["#e0c53c", "#a1954e", "#d3944b", "#8b6654"]}>FLAVORS OF DUBAI</AuroraText> ARE HERE
                 </h1>
                 
-                <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-center text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                     Experience authentic Dubai crepes crafted with <span className="text-accent-foreground font-bold">premium ingredients and traditional techniques</span> — bringing the taste of the Middle East directly to your neighborhood.
                 </p>
 

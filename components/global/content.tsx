@@ -6,7 +6,7 @@ export default function ContentSection() {
     return (
         <section className="bg-background py-16 md:py-24">
             <div className="mx-auto max-w-6xl space-y-12 px-6 md:space-y-16">
-                <h1 className="text-5xl tracking-tighter font-semibold text-center sm:text-6xl md:text-7xl lg:text-8xl">
+                <h1 className="text-center text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
                     YOUR DAILY DOSE OF {" "}
                     <LineShadowText className="italic text-primary" shadowColor={"#000"}>
                         SUGAR...
@@ -34,7 +34,7 @@ export default function ContentSection() {
                         {/* Testimonial */}
                         <a href='https://share.google/A75ELFx7Yno6jdTGo' className="bg-muted/50 rounded-2xl border border-border p-6 backdrop-blur-sm" target="_blank" rel="noopener noreferrer">
                             <blockquote className="space-y-4">
-                                <p className="text-foreground text-base italic leading-relaxed">
+                                <p className="text-foreground text-lg italic leading-relaxed">
                                     "Creamy, flavorful, and made just right. With crepes, waffles, ice cream, and so many toppings to choose from, there's something for every sweet tooth."
                                 </p>
 

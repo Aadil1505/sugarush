@@ -9,9 +9,8 @@ import { useScroll } from 'motion/react'
 
 const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '#about' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Menu', href: '/menu' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 export const Navbar = () => {
@@ -83,7 +82,7 @@ export const Navbar = () => {
                                 <Button
                                     asChild
                                     size="sm">
-                                    <Link href="#">
+                                    <Link href="https://www.toasttab.com/local/order/yoyo-chicken-753-merrick-rd-baldwin-753-merrick-rd">
                                         <span>ORDER NOW</span>
                                     </Link>
                                 </Button>
