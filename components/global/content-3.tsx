@@ -13,7 +13,7 @@ const carouselImages = [
     { src: "/kunafa.jpeg", alt: "Kunafa" },
     { src: "/waffle.jpg", alt: "Dubai Waffle" },
     { src: "/waffle-stick.jpeg", alt: "Waffle Sticks" },
-    { src: "/strawberry.jpg", alt: "Classic Nutella Crepe" },
+    { src: "/strawberry.jpg", alt: "Strawberry Cup" },
 ]
 
 export default function ContentSection3() {
