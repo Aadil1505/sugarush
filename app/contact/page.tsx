@@ -1,6 +1,7 @@
-import { MapPin, Phone, Clock, Navigation } from "lucide-react"
+import { MapPin, Phone, Clock, Navigation, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from 'next/link'
 
 export default function Contact() {
     const hours = [
@@ -127,7 +128,7 @@ export default function Contact() {
                         <p className="text-muted-foreground text-lg">
                             Feel free to give us a call or visit us in person. Our friendly staff is ready to serve you and answer any questions about our menu and services.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-4 pt-6">
+                        <div className="flex flex-wrap justify-center gap-4">
                             <Button
                                 asChild
                                 size="lg"
@@ -148,6 +149,16 @@ export default function Contact() {
                                     Order Online
                                 </a>
                             </Button>
+                        </div>
+                        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
+                            <img
+                                className="rounded-(--radius)"
+                                src="store-front.jpg"
+                                alt="Store Front"
+                                height=""
+                                width=""
+                                loading="lazy"
+                            />
                         </div>
                     </div>
                 </div>

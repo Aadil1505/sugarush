@@ -25,7 +25,7 @@ const slides = [
   },
   {
     type: 'image',
-    src: 'shake1.jpg',
+    src: 'strawberry.jpg',
     title: 'Milkshake',
   },
 ]

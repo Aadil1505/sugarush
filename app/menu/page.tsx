@@ -88,7 +88,7 @@ export default function Menu() {
     }
 
     return (
-        <section className="py-16 md:py-32 bg-muted/30">
+        <section className="py-16 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Header */}
                 <div className="text-center space-y-4 mb-12 md:mb-16">
@@ -112,7 +112,7 @@ export default function Menu() {
                             <CardContent className="p-4 md:p-6">
                                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                                     {items.map((item, index) => (
-                                        <div 
+                                        <div
                                             key={index}
                                             className="flex items-center justify-between p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                                         >
@@ -131,9 +131,19 @@ export default function Menu() {
                 </div>
 
                 {/* Footer Note */}
-                <div className="mt-12 text-center">
-                    <p className="text-sm text-muted-foreground">
-                        All prices are subject to change. Ask about our daily specials!
+                <div className="mt-12 text-center border-b border-border pb-8">
+                    <div className="flex flex-col items-center gap-4 mb-4">
+                        <img
+                            src={"halal.png"}
+                            className='size-12'
+                            alt="Halal Certified"
+                        />
+                        <p className="text-sm font-medium text-secondary-foreground tracking-wide">
+                            100% HALAL CERTIFIED
+                        </p>
+                    </div>
+                    <p className="text-xs text-secondary-foreground max-w-2xl mx-auto leading-relaxed px-4">
+                        Please inform your server of any dietary restrictions or allergies.
                     </p>
                 </div>
             </div>

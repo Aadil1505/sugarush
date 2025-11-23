@@ -9,7 +9,7 @@ export default function ContentSection1() {
                 </h1>
                 
                 <p className="text-center text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                    Experience authentic Dubai crepes crafted with <span className="text-accent-foreground font-bold">premium ingredients and traditional techniques</span> — bringing the taste of the Middle East directly to your neighborhood.
+                    The <span className='text-primary'>sweetest</span> Dubai styled desserts crafted with <span className="text-accent-foreground font-bold">only the best premium ingredients.</span>
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12">

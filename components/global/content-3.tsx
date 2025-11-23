@@ -8,12 +8,12 @@ import {
 import { SparklesText } from "../ui/sparkles-text"
 
 const carouselImages = [
-    { src: "/shake1.jpg", alt: "Classic Nutella Crepe" },
-    { src: "/waffle.jpg", alt: "Strawberry Delight" },
-    { src: "/crepe-3.jpg", alt: "Pistachio Dream" },
-    { src: "/crepe-4.jpg", alt: "Lotus Biscoff Special" },
-    { src: "/crepe-5.jpg", alt: "Mixed Berry Crepe" },
-    { src: "/crepe-6.jpg", alt: "Caramel Banana Crepe" },
+    { src: "/crepe-store.jpeg", alt: "Dubai Crepe" },
+    { src: "/shake-store.jpeg", alt: "Crazy Shake" },
+    { src: "/kunafa.jpeg", alt: "Kunafa" },
+    { src: "/waffle.jpg", alt: "Dubai Waffle" },
+    { src: "/waffle-stick.jpeg", alt: "Waffle Sticks" },
+    { src: "/strawberry.jpg", alt: "Classic Nutella Crepe" },
 ]
 
 export default function ContentSection3() {
@@ -26,7 +26,7 @@ export default function ContentSection3() {
                         You&apos;ll Seek Seconds
                     </h2>
                     <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-                        Explore our handcrafted crepes made fresh daily with the finest ingredients
+                        Come and try <span className="text-primary">everything</span>
                     </p>
                 </div>
 

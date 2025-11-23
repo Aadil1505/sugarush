@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 
 const carouselImages = [
-    { src: "/shake1.jpg", alt: "Classic Nutella Crepe" },
+    { src: "/strawberry.jpg", alt: "Classic Nutella Crepe" },
     { src: "/waffle.jpg", alt: "Strawberry Delight" },
     { src: "/crepe-3.jpg", alt: "Pistachio Dream" },
     { src: "/crepe-4.jpg", alt: "Lotus Biscoff Special" },
