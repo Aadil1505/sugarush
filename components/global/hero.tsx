@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import Image from 'next/image'
 import { Play, Pause, ShoppingCart } from 'lucide-react'
 import {
   Carousel,
@@ -15,17 +16,17 @@ import Link from 'next/link'
 const slides = [
   {
     type: 'video',
-    src: 'vid.mp4',
+    src: '/vid.mp4',
     title: 'Video',
   },
   {
     type: 'image',
-    src: 'waffle.jpg',
+    src: '/waffle.jpg',
     title: 'Waffle',
   },
   {
     type: 'image',
-    src: 'strawberry.jpg',
+    src: '/strawberry.jpg',
     title: 'Milkshake',
   },
 ]
@@ -123,10 +124,13 @@ export default function HeroCarousel() {
                   playsInline
                 />
               ) : (
-                <img
+                <Image
                   src={slide.src}
                   alt={slide.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                  priority={index === 1}
                 />
               )}
             </CarouselItem>

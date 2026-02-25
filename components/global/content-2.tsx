@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/button"
 
@@ -40,20 +41,28 @@ export default function ContentSection2() {
 
                         {/* Shake Image */}
                         <div className="relative flex justify-center items-center md:justify-end">
-                            <img
+                            <Image
                                 src="/shake-transparent.png"
-                                alt="Delicious shake"
-                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl opacity-20"
+                                alt=""
+                                width={240}
+                                height={320}
+                                aria-hidden="true"
+                                className="w-32 md:w-48 lg:w-60 h-auto rotate-6 drop-shadow-2xl opacity-20"
                             />
-                            <img
+                            <Image
                                 src="/shake-transparent.png"
                                 alt="Delicious shake"
-                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl hover:rotate-12 transition-transform duration-300 mb-6"
+                                width={240}
+                                height={320}
+                                className="w-32 md:w-48 lg:w-60 h-auto rotate-6 drop-shadow-2xl hover:rotate-12 transition-transform duration-300 mb-6"
                             />
-                            <img
+                            <Image
                                 src="/shake-transparent.png"
-                                alt="Delicious shake"
-                                className="w-32 md:w-48 lg:w-60 rotate-6 drop-shadow-2xl opacity-20"
+                                alt=""
+                                width={240}
+                                height={320}
+                                aria-hidden="true"
+                                className="w-32 md:w-48 lg:w-60 h-auto rotate-6 drop-shadow-2xl opacity-20"
                             />
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import {
     Carousel,
     CarouselContent,
@@ -40,13 +41,15 @@ export default function ContentSection3() {
                     <CarouselContent className="-ml-4">
                         {carouselImages.map((image, index) => (
                             <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                                <div className="relative group">
-                                    <img
+                                <div className="relative group h-80 rounded-2xl overflow-hidden shadow-lg border border-border">
+                                    <Image
                                         src={image.src}
                                         alt={image.alt}
-                                        className="rounded-2xl shadow-lg w-full h-80 object-cover border border-border"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                                         <div className="absolute bottom-4 left-4 text-white">
                                             <p className="font-semibold text-lg">{image.alt}</p>
                                         </div>

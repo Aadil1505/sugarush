@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Menu() {
@@ -133,10 +134,12 @@ export default function Menu() {
                 {/* Footer Note */}
                 <div className="mt-12 text-center border-b border-border pb-8">
                     <div className="flex flex-col items-center gap-4 mb-4">
-                        <img
-                            src={"halal.png"}
-                            className='size-12'
+                        <Image
+                            src="/halal.png"
                             alt="Halal Certified"
+                            width={48}
+                            height={48}
+                            className="size-12"
                         />
                         <p className="text-sm font-medium text-secondary-foreground tracking-wide">
                             100% HALAL CERTIFIED

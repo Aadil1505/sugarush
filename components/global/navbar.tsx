@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -48,7 +49,7 @@ export const Navbar = () => {
                             aria-label="home"
                             className="flex items-center space-x-2"
                         >
-                            <img src="/sugarush-transparent.png" className="h-10" alt="SugaRush" />
+                            <Image src="/sugarush-transparent.png" alt="SugaRush" width={160} height={40} style={{ height: '2.5rem', width: 'auto' }} />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -91,7 +92,7 @@ export const Navbar = () => {
                                             onClick={() => setOpen(false)}
                                             className="flex items-center"
                                         >
-                                            <img src="/sugarush-transparent.png" className="h-12" alt="SugaRush" />
+                                            <Image src="/sugarush-transparent.png" alt="SugaRush" width={192} height={48} style={{ height: '3rem', width: 'auto' }} />
                                         </Link>
                                     </SheetTitle>
                                 </SheetHeader>

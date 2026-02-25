@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const links =
@@ -15,7 +16,7 @@ export default function FooterSection() {
                     href="/"
                     aria-label="go home"
                     className="mx-auto block size-fit">
-                    <img src={"sugarush-transparent.png"} className='h-12' />
+                    <Image src="/sugarush-transparent.png" alt="SugaRush" width={192} height={48} style={{ height: '3rem', width: 'auto' }} />
                 </Link>
 
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
